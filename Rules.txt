@@ -1,0 +1,262 @@
+Call:
+rpart(formula = Absenteeism_time_in_hours ~ ., data = train_data, 
+    method = "anova")
+  n= 435 
+
+     CP nsplit rel error xerror  xstd
+1 0.078      0      1.00   1.00 0.088
+2 0.051      3      0.77   0.81 0.084
+3 0.039      4      0.72   0.79 0.086
+4 0.021      8      0.56   0.65 0.076
+5 0.017     10      0.52   0.66 0.073
+6 0.015     11      0.50   0.65 0.073
+7 0.013     12      0.49   0.65 0.073
+8 0.010     13      0.47   0.67 0.075
+
+Variable importance
+           Reason_for_absence26            Reason_for_absence22            Reason_for_absence19 
+                              9                               8                               8 
+           Reason_for_absence28            Reason_for_absence13                 Social_drinker0 
+                              7                               6                               5 
+         Transportation_expense             Reason_for_absence0                             Age 
+                              5                               4                               4 
+                Social_drinker1           Disciplinary_failure0 Distance_from_Residence_to_Work 
+                              4                               4                               4 
+                         Weight           Disciplinary_failure1            Reason_for_absence23 
+                              3                               3                               3 
+           Reason_for_absence27               Month_of_absence3                          Height 
+                              3                               2                               2 
+                           Son1                            Pet0                    Service_time 
+                              2                               1                               1 
+                           ID33                Day_of_the_week6                            ID20 
+                              1                               1                               1 
+                           ID28                             ID3           Work_load_Average_day 
+                              1                               1                               1 
+                           Pet2                             ID5                            Pet1 
+                              1                               1                               1 
+              Month_of_absence0 
+                              1 
+
+Node number 1: 435 observations,    complexity param=0.078
+  mean=4.2, MSE=11 
+  left son=2 (410 obs) right son=3 (25 obs)
+  Primary splits:
+      Reason_for_absence22  < 0.5  to the left,  improve=0.077, (0 missing)
+      Reason_for_absence19  < 0.5  to the left,  improve=0.067, (0 missing)
+      Reason_for_absence26  < 0.5  to the left,  improve=0.064, (0 missing)
+      Reason_for_absence0   < 0.5  to the right, improve=0.063, (0 missing)
+      Disciplinary_failure1 < 0.5  to the right, improve=0.056, (0 missing)
+
+Node number 2: 410 observations,    complexity param=0.078
+  mean=4, MSE=10 
+  left son=4 (394 obs) right son=5 (16 obs)
+  Primary splits:
+      Reason_for_absence19  < 0.5  to the left,  improve=0.083, (0 missing)
+      Reason_for_absence26  < 0.5  to the left,  improve=0.082, (0 missing)
+      Reason_for_absence0   < 0.5  to the right, improve=0.062, (0 missing)
+      Disciplinary_failure1 < 0.5  to the right, improve=0.055, (0 missing)
+      Disciplinary_failure0 < 0.5  to the left,  improve=0.050, (0 missing)
+
+Node number 3: 25 observations
+  mean=7.9, MSE=4.4 
+
+Node number 4: 394 observations,    complexity param=0.078
+  mean=3.8, MSE=9.4 
+  left son=8 (368 obs) right son=9 (26 obs)
+  Primary splits:
+      Reason_for_absence26  < 0.5  to the left,  improve=0.100, (0 missing)
+      Reason_for_absence0   < 0.5  to the right, improve=0.064, (0 missing)
+      Disciplinary_failure1 < 0.5  to the right, improve=0.057, (0 missing)
+      Reason_for_absence13  < 0.5  to the left,  improve=0.053, (0 missing)
+      Disciplinary_failure0 < 0.5  to the left,  improve=0.052, (0 missing)
+  Surrogate splits:
+      ID5    < 0.5  to the left,  agree=0.94, adj=0.077, (0 split)
+      Weight < 0.94 to the left,  agree=0.94, adj=0.077, (0 split)
+
+Node number 5: 16 observations
+  mean=8.6, MSE=11 
+
+Node number 8: 368 observations,    complexity param=0.051
+  mean=3.5, MSE=8.6 
+  left son=16 (342 obs) right son=17 (26 obs)
+  Primary splits:
+      Reason_for_absence13  < 0.5  to the left,  improve=0.075, (0 missing)
+      Reason_for_absence0   < 0.5  to the right, improve=0.064, (0 missing)
+      Disciplinary_failure1 < 0.5  to the right, improve=0.058, (0 missing)
+      Disciplinary_failure0 < 0.5  to the left,  improve=0.051, (0 missing)
+      Reason_for_absence27  < 0.5  to the right, improve=0.036, (0 missing)
+
+Node number 9: 26 observations
+  mean=7.5, MSE=5.3 
+
+Node number 16: 342 observations,    complexity param=0.039
+  mean=3.3, MSE=7.1 
+  left son=32 (19 obs) right son=33 (323 obs)
+  Primary splits:
+      Reason_for_absence0   < 0.5  to the right, improve=0.073, (0 missing)
+      Disciplinary_failure1 < 0.5  to the right, improve=0.067, (0 missing)
+      Disciplinary_failure0 < 0.5  to the left,  improve=0.058, (0 missing)
+      Reason_for_absence10  < 0.5  to the left,  improve=0.046, (0 missing)
+      Reason_for_absence18  < 0.5  to the left,  improve=0.034, (0 missing)
+  Surrogate splits:
+      Disciplinary_failure0 < 0.5  to the left,  agree=0.99, adj=0.842, (0 split)
+      Disciplinary_failure1 < 0.5  to the right, agree=0.99, adj=0.789, (0 split)
+      Month_of_absence0     < 0.5  to the right, agree=0.95, adj=0.158, (0 split)
+      Weight                < 0.76 to the right, agree=0.95, adj=0.158, (0 split)
+      ID5                   < 0.5  to the right, agree=0.95, adj=0.053, (0 split)
+
+Node number 17: 26 observations,    complexity param=0.017
+  mean=6.5, MSE=20 
+  left son=34 (16 obs) right son=35 (10 obs)
+  Primary splits:
+      Weight          < 0.62 to the left,  improve=0.16, (0 missing)
+      Social_drinker0 < 0.5  to the right, improve=0.12, (0 missing)
+      Social_drinker1 < 0.5  to the left,  improve=0.12, (0 missing)
+      Service_time    < 0.33 to the left,  improve=0.11, (0 missing)
+      Age             < 0.22 to the left,  improve=0.11, (0 missing)
+  Surrogate splits:
+      ID3                             < 0.5  to the left,  agree=0.85, adj=0.6, (0 split)
+      Distance_from_Residence_to_Work < 0.97 to the left,  agree=0.85, adj=0.6, (0 split)
+      Service_time                    < 0.43 to the left,  agree=0.85, adj=0.6, (0 split)
+      Age                             < 0.48 to the left,  agree=0.85, adj=0.6, (0 split)
+      Social_drinker0                 < 0.5  to the right, agree=0.81, adj=0.5, (0 split)
+
+Node number 32: 19 observations
+  mean=0.36, MSE=1.4 
+
+Node number 33: 323 observations,    complexity param=0.039
+  mean=3.5, MSE=6.8 
+  left son=66 (56 obs) right son=67 (267 obs)
+  Primary splits:
+      Reason_for_absence27 < 0.5  to the right, improve=0.049, (0 missing)
+      Reason_for_absence10 < 0.5  to the left,  improve=0.045, (0 missing)
+      ID11                 < 0.5  to the left,  improve=0.037, (0 missing)
+      Son2                 < 0.5  to the left,  improve=0.034, (0 missing)
+      Reason_for_absence18 < 0.5  to the left,  improve=0.034, (0 missing)
+  Surrogate splits:
+      Month_of_absence1 < 0.5  to the right, agree=0.84, adj=0.071, (0 split)
+      ID22              < 0.5  to the right, agree=0.83, adj=0.036, (0 split)
+      Weight            < 0.02 to the left,  agree=0.83, adj=0.036, (0 split)
+
+Node number 34: 16 observations
+  mean=5.1, MSE=17 
+
+Node number 35: 10 observations
+  mean=8.7, MSE=16 
+
+Node number 66: 56 observations
+  mean=2.2, MSE=0.36 
+
+Node number 67: 267 observations,    complexity param=0.039
+  mean=3.8, MSE=7.8 
+  left son=134 (92 obs) right son=135 (175 obs)
+  Primary splits:
+      Reason_for_absence23 < 0.5  to the right, improve=0.063, (0 missing)
+      Reason_for_absence28 < 0.5  to the right, improve=0.054, (0 missing)
+      Reason_for_absence10 < 0.5  to the left,  improve=0.041, (0 missing)
+      ID11                 < 0.5  to the left,  improve=0.032, (0 missing)
+      Son1                 < 0.5  to the right, improve=0.031, (0 missing)
+  Surrogate splits:
+      Month_of_absence9 < 0.5  to the right, agree=0.68, adj=0.087, (0 split)
+      Age               < 0.22 to the left,  agree=0.68, adj=0.087, (0 split)
+      Height            < 0.25 to the left,  agree=0.68, adj=0.087, (0 split)
+      Service_time      < 0.31 to the left,  agree=0.68, adj=0.076, (0 split)
+      ID27              < 0.5  to the right, agree=0.67, adj=0.054, (0 split)
+
+Node number 134: 92 observations
+  mean=2.8, MSE=5.4 
+
+Node number 135: 175 observations,    complexity param=0.039
+  mean=4.3, MSE=8.3 
+  left son=270 (75 obs) right son=271 (100 obs)
+  Primary splits:
+      Reason_for_absence28 < 0.5  to the right, improve=0.220, (0 missing)
+      ID11                 < 0.5  to the left,  improve=0.070, (0 missing)
+      Weight               < 0.67 to the left,  improve=0.070, (0 missing)
+      Son2                 < 0.5  to the left,  improve=0.049, (0 missing)
+      Reason_for_absence10 < 0.5  to the left,  improve=0.041, (0 missing)
+  Surrogate splits:
+      Social_drinker0                 < 0.5  to the left,  agree=0.68, adj=0.25, (0 split)
+      Social_drinker1                 < 0.5  to the right, agree=0.68, adj=0.25, (0 split)
+      Distance_from_Residence_to_Work < 0.53 to the right, agree=0.67, adj=0.23, (0 split)
+      ID20                            < 0.5  to the right, agree=0.64, adj=0.16, (0 split)
+      Day_of_the_week6                < 0.5  to the right, agree=0.64, adj=0.16, (0 split)
+
+Node number 270: 75 observations
+  mean=2.7, MSE=2.9 
+
+Node number 271: 100 observations,    complexity param=0.021
+  mean=5.4, MSE=9.2 
+  left son=542 (66 obs) right son=543 (34 obs)
+  Primary splits:
+      Transportation_expense          < 0.47 to the left,  improve=0.100, (0 missing)
+      Reason_for_absence25            < 0.5  to the right, improve=0.099, (0 missing)
+      Social_drinker1                 < 0.5  to the left,  improve=0.088, (0 missing)
+      Social_drinker0                 < 0.5  to the right, improve=0.088, (0 missing)
+      Distance_from_Residence_to_Work < 0.48 to the left,  improve=0.071, (0 missing)
+  Surrogate splits:
+      Social_drinker0                 < 0.5  to the right, agree=0.81, adj=0.44, (0 split)
+      Social_drinker1                 < 0.5  to the left,  agree=0.81, adj=0.44, (0 split)
+      Pet1                            < 0.5  to the left,  agree=0.77, adj=0.32, (0 split)
+      Distance_from_Residence_to_Work < 0.53 to the left,  agree=0.76, adj=0.29, (0 split)
+      Height                          < 0.35 to the right, agree=0.76, adj=0.29, (0 split)
+
+Node number 542: 66 observations,    complexity param=0.021
+  mean=4.7, MSE=10 
+  left son=1084 (59 obs) right son=1085 (7 obs)
+  Primary splits:
+      Month_of_absence3     < 0.5  to the left,  improve=0.150, (0 missing)
+      Reason_for_absence25  < 0.5  to the right, improve=0.057, (0 missing)
+      Hit_target            < 0.65 to the right, improve=0.041, (0 missing)
+      Work_load_Average_day < 0.43 to the left,  improve=0.033, (0 missing)
+      Day_of_the_week3      < 0.5  to the left,  improve=0.028, (0 missing)
+  Surrogate splits:
+      Work_load_Average_day < 0.95 to the left,  agree=0.94, adj=0.43, (0 split)
+
+Node number 543: 34 observations,    complexity param=0.013
+  mean=6.8, MSE=5 
+  left son=1086 (7 obs) right son=1087 (27 obs)
+  Primary splits:
+      Age                             < 0.75 to the right, improve=0.36, (0 missing)
+      Social_drinker1                 < 0.5  to the left,  improve=0.17, (0 missing)
+      Social_drinker0                 < 0.5  to the right, improve=0.17, (0 missing)
+      Distance_from_Residence_to_Work < 0.61 to the left,  improve=0.12, (0 missing)
+      Height                          < 0.45 to the left,  improve=0.10, (0 missing)
+  Surrogate splits:
+      ID33                   < 0.5  to the right, agree=0.97, adj=0.86, (0 split)
+      Height                 < 0.15 to the left,  agree=0.97, adj=0.86, (0 split)
+      Social_drinker0        < 0.5  to the right, agree=0.94, adj=0.71, (0 split)
+      Social_drinker1        < 0.5  to the left,  agree=0.94, adj=0.71, (0 split)
+      Transportation_expense < 0.52 to the left,  agree=0.88, adj=0.43, (0 split)
+
+Node number 1084: 59 observations,    complexity param=0.015
+  mean=4.3, MSE=7.8 
+  left son=2168 (16 obs) right son=2169 (43 obs)
+  Primary splits:
+      Son1                   < 0.5  to the right, improve=0.160, (0 missing)
+      Transportation_expense < 0.34 to the right, improve=0.160, (0 missing)
+      Age                    < 0.1  to the left,  improve=0.091, (0 missing)
+      ID28                   < 0.5  to the right, improve=0.091, (0 missing)
+      Pet0                   < 0.5  to the left,  improve=0.080, (0 missing)
+  Surrogate splits:
+      Transportation_expense < 0.34 to the right, agree=1.00, adj=1.00, (0 split)
+      Pet0                   < 0.5  to the left,  agree=0.97, adj=0.88, (0 split)
+      ID28                   < 0.5  to the right, agree=0.92, adj=0.69, (0 split)
+      Age                    < 0.1  to the left,  agree=0.92, adj=0.69, (0 split)
+      Pet2                   < 0.5  to the right, agree=0.88, adj=0.56, (0 split)
+
+Node number 1085: 7 observations
+  mean=8.3, MSE=14 
+
+Node number 1086: 7 observations
+  mean=4.1, MSE=6.1 
+
+Node number 1087: 27 observations
+  mean=7.5, MSE=2.4 
+
+Node number 2168: 16 observations
+  mean=2.5, MSE=0.88 
+
+Node number 2169: 43 observations
+  mean=5, MSE=8.7 
+
