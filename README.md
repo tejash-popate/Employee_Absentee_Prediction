@@ -3,6 +3,7 @@ This data science project deals with predicting employee absenteeism in hours an
 
 # About Data:
 1. Individual identification (ID): This is nothing but the employee id in the courier company.
+
 2.Reason for absence (ICD).
 Absences attested by the International Code of Diseases (ICD) stratified into 21
 categories (I to XXI) as follows:
